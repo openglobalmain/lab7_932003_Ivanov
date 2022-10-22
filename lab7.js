@@ -13,13 +13,12 @@
   div.style.height = w+"px";
   div.style.top = w * 4 + "px";
   div.style.left = h * 4 + "px";
-  div.mouseover
+  div.onclick = chanCol;
+  div.ondblclick = delIt;
   document.body.append(div);
   a--;
     }}
 
-this.
-    
  function trianglef(){
     var b = Number(document.getElementById("vlue").value);
     while(b>0)
@@ -34,6 +33,8 @@ this.
   div.style.borderBottom = w * 2 +"px"+" solid #6498f8a3";
   div.style.top = w * 4 + "px";
   div.style.left = h * 4 + "px";
+  div.onclick = chanColTr;
+  div.ondblclick = delIt;
 
   document.body.append(div);
   b--;
@@ -52,7 +53,22 @@ this.
     div.style.height = w+"px";
     div.style.top = w * 4 + "px";
     div.style.left = h * 4 + "px";
-
+    div.onclick = chanCol;
+    div.ondblclick = delIt;
     document.body.append(div);
     c--;
     }}
+
+function chanCol(){
+    this.style.background = "yellow";
+    console.log(this);
+    }
+    function chanColTr(){
+        this.style.borderBottomColor = "yellow";
+        console.log(this);
+        }
+function delIt(){
+    // this.background = "transparent";
+    this.remove();
+}
+        
